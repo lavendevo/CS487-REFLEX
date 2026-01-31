@@ -1,0 +1,48 @@
+/* Custom Scrollbar for a "Cyberpunk" feel */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a; 
+}
+::-webkit-scrollbar-thumb {
+    background: #334155; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569; 
+}
+
+/* Typography Overrides */
+body {
+    font-family: 'Inter', sans-serif;
+}
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Pipeline Connector Line */
+.pipeline-step {
+    position: relative;
+}
+.pipeline-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 1.5rem; /* Aligns with icon center */
+    top: 3rem;
+    bottom: -1rem;
+    width: 2px;
+    background-color: #334155;
+    z-index: 0;
+}
+
+/* JSON Formatting */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.key { color: #94a3b8; }
+.string { color: #a5b4fc; }
+.number { color: #fca5a5; }
+.boolean { color: #fcd34d; }
